@@ -19,6 +19,7 @@ We use the following models:
 
 We use 19 predictors:
     1. Allostatic load measures: diastolic and systolic blood pressure (binary), body mass index (categorical), glycated hemoglobin (binary), C-reactive protein (binary), and hormone dehydroepiandrosterone (binary)
+            These measures were selected based on the following papers: https://academic.oup.com/psychsocgerontology/article/76/3/574/5703612 and https://academic.oup.com/psychsocgerontology/article/64B/suppl_1/i67/552266
     2. Health behaviors: smoking (categorical), alcohol consumption (binary), and physical activity (categorical)
     3. Socio-demographic status: education (categorical), net household assets (categorical), and marital status (binary)
     4. Health status: self-rated physical (categorical) and mental health (categorical), chronic COPD conditions (binary), and functional limitations (binary)
@@ -44,3 +45,5 @@ We use the following packages:
     5. seaborn
     6. keras
     7. tensorflow
+
+Previous paper predicts 5-year mortality with olfactory dysfunction (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107541#s2)
