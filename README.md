@@ -17,11 +17,11 @@ We use the following models:
     2. Random forest/Decision tree
     3. Support vector machine
 
-We use 19 predictors:
-    1. Allostatic load measures: diastolic and systolic blood pressure (binary), body mass index (categorical), glycated hemoglobin (binary), C-reactive protein (binary), and hormone dehydroepiandrosterone (binary)
+We use 20 predictors:
+    1. Allostatic load measures: diastolic and systolic blood pressure (binary), body mass index (continuous), glycated hemoglobin (binary), C-reactive protein (binary), and hormone dehydroepiandrosterone (binary)
             These measures were selected based on the following papers: https://academic.oup.com/psychsocgerontology/article/76/3/574/5703612 and https://academic.oup.com/psychsocgerontology/article/64B/suppl_1/i67/552266
     2. Health behaviors: smoking (categorical), alcohol consumption (binary), and physical activity (categorical)
-    3. Socio-demographic status: education (categorical), net household assets (categorical), and marital status (binary)
+    3. Socio-demographic status: age (continuous), education (categorical), net household assets (categorical), and marital status (binary)
     4. Health status: self-rated physical (categorical) and mental health (categorical), chronic COPD conditions (binary), and functional limitations (binary)
     
 Our target variable is mortality (binary). There are 3005 observations in NSHAP with 893 deaths, which is a 29.7% mortality rate. The data is imbalanced (893 positive, 2112 negative), and we use the following methods to deal with the imbalance:
