@@ -15,7 +15,6 @@ Present academic literature in predicting mortality has primarily focused on dis
 We use the following models:
     1. Logistic regression
     2. Random forest/Decision tree
-    3. Support vector machine
 
 We use 19 predictors:
     1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
