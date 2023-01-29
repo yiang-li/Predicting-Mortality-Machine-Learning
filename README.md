@@ -6,11 +6,11 @@
 
 This is a project for MACS 30100 Perspectives in Computational Modeling at the University of Chicago.
 
-The goal of this project is to train a binary classifier to predict the mortality of the older US Adults in National Social and Health Survey (NSHAP) Wave 1 and Wave 3, which is a nationally representative survey of the older US adults (aged 57-85) in 2010 and 2020.
+The goal of this project is to train a binary classifier to predict the mortality of older US Adults in National Social and Health Survey (NSHAP) Wave 1 and Wave 3, which is a nationally representative survey of the older US adults (aged 57-85) in 2010 and 2020.
 
 The link to the dataset: https://www.icpsr.umich.edu/web/NACDA/series/706
 
-Present academic literature in predicting mortality has primarily focused on disease and frailty, although social, behavioral, and psychological statues may herald broad physiological decline. We aim to predict mortality using a comprehensive set of predictors, including allostatic load measures, health behaviors, socio-demographic status, and health status. The findings of this study may help to identify the older adults who are at risk of mortality and to develop interventions to improve their health.
+Present academic literature in predicting mortality has primarily focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. We aim to predict mortality using a comprehensive set of predictors, including allostatic load measures, health behaviors, socio-demographic status, and health status. The findings of this study may help to identify older adults who are at risk of mortality and to develop interventions to improve their health.
 
 We use the following models:
     1. Logistic regression
@@ -26,8 +26,12 @@ We use 19 predictors:
 Our target variable is mortality (binary). There are 3005 observations in NSHAP with 893 deaths, which is a 29.7% mortality rate. The data is imbalanced (893 positive, 2112 negative), and we use the following methods to deal with the imbalance:
     1. Undersampling
     2. Oversampling
-    3. SMOTE
-    4. ADASYN
+    3. Synthetic minority oversampling technique (SMOTE)
+    4. Adaptive synthetic sampling approach for imbalanced learning (ADASYN)
+    5. Class weights
+    6. Cost-sensitive learning
+    7. Ensemble methods
+    8. Penalized methods
     
 We use the following metrics:
     1. Accuracy
