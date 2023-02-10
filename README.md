@@ -30,12 +30,14 @@ We use the following models:
     1. Logistic regression
     2. Random forest/Decision tree
 
-We use 19 predictors:
-    1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
+We use 24 predictors:
+    1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin A1C (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
             These measures were selected based on the following papers: https://academic.oup.com/psychsocgerontology/article/76/3/574/5703612 and https://academic.oup.com/psychsocgerontology/article/64B/suppl_1/i67/552266
     2. Health behaviors: smoking (binary), alcohol consumption (binary), physical activity (binary), and sleep duration (ordinal) 
     3. Socio-demographic status: age (ordinal), education (ordinal), net household assets (ordinal), marital status (binary), sex (binary), and race (binary)
-    4. Health status: self-rated physical (ordinal) and mental health (ordinal), chronic COPD conditions (binary), and functional limitations (binary)
+    4. Health status: self-rated physical (ordinal) and mental health (ordinal), lung COPD conditions (binary), and functional limitations (binary)
+    5. Network measures: size of social network (continuous), number of unique social contacts (continuous), proportion of social contacts living together (continuous), average frequency of talking to social contacts (continuous), and average closeness to social contacts (continuous)
+            These measures were selected based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6110003/
     
 Our target variable is mortality (binary). There are 3005 observations in NSHAP with 893 deaths, which is a 29.7% mortality rate. The data is imbalanced (893 positive, 2112 negative), and we use the following methods to deal with the imbalance:
     1. Undersampling
