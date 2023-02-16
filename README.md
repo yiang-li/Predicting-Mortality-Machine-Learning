@@ -10,25 +10,14 @@ Please record your presentation and upload the shared **link** to your recording
 
 https://youtu.be/HEdK6qYsY_Q
 
-----------------------
-
-# Project1
- 
+---------------------- 
 ## Predicting Mortality of the Older US Adults in a Nationally Representative Survey
 
 ## Authors: Yiang Li and Zejian Lv
 
 This is a project for MACS 30100 Perspectives in Computational Modeling at the University of Chicago.
 
-The goal of this project is to train a binary classifier to predict the mortality of older US Adults in National Social and Health Survey (NSHAP) Wave 1 and Wave 3, which is a nationally representative survey of the older US adults (aged 57-85) in 2010 and 2020.
-
-The link to the dataset: https://www.icpsr.umich.edu/web/NACDA/series/706
-
-Present academic literature in predicting mortality has primarily focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. We aim to predict mortality using a comprehensive set of predictors, including allostatic load measures, health behaviors, socio-demographic status, and health status. The findings of this study may help to identify older adults who are at risk of mortality and to develop interventions to improve their health.
-
-We use the following models:
-    1. Logistic regression
-    2. Random forest/Decision tree
+The goal of this project is to train a binary classifier to predict the mortality of older US Adults in modern nationally representative aging surveys.
 
 We use 24 predictors:
     1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin A1C (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
@@ -38,6 +27,39 @@ We use 24 predictors:
     4. Health status: self-rated physical (ordinal) and mental health (ordinal), lung COPD conditions (binary), and functional limitations (binary)
     5. Network measures: size of social network (continuous), number of unique social contacts (continuous), proportion of social contacts living together (continuous), average frequency of talking to social contacts (continuous), and average closeness to social contacts (continuous)
             These measures were selected based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6110003/
+
+1. Body mass index: (NSHAP: BMI (continuous); WLS: z_ix011rec (continuous); HC139 - weight in pounds, HC 142 height in inches (binary)
+2. Hypertension: NSHAP: CONDITNS_6 (binary); WLS: z_ax341re (binary); HC005 (binary)
+3. Diabetes: NSHAP: CONDITNS_7 (binary); WLS: z_ax342re (binary); HC010 (binary)
+4. Fallen: NSHAP: FALLEN (binary); WLS: z_ix150rer (binary); HC079 (binary)
+5. Smoking: NSHAP: SMOKECIG (binary); WLS: z_ix013rec (binary); HC117 (binary)
+6. Drunk alcohol: NSHAP: EVERDRNK (binary); WLS: z_gu025e (binary); HC134 (binary)
+7. Age at baseline: NSHAP AGE (ordinal); WLS: z_brdxdy (ordinal, year of birth); HX067_R (ordinal, year of birth)
+8. Education: NSHAP: EDUC (ordinal); WLS: edat16 (ordinal); HB014A (ordinal, year of birth)
+9. Net household assets: NSHAP: HSASSETS_RECODE (ordinal); WLS: z_rr043rec (continuous); HC134 + HQ331 + HQ376 (continuous)
+10. Marital status: NSHAP: MARITAL (binary); WLS: z_brdxdy (ordinal, year of birth); HX067_R (ordinal, year of birth)
+Project 2 (Yiang):
+Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
+
+The link to the dataset: https://hrs.isr.umich.edu/data
+
+Project 2 (Zejian):
+Wisconsin Longitudinal Study (WLS) is a prospective cohort study of graduates of Wisconsin high schools. I use 2004 characteristics as baseline and 2020 disposition status as target.
+
+The link to the dataset: https://researchers.wls.wisc.edu/data/survey-data/
+
+
+
+Project 1:
+
+National Social and Health Survey (NSHAP) Wave 1 (2010, as baseline) and Wave 3 (2020, disposition status as target), which is a nationally representative survey of the older US adults (aged 57-85).
+
+The link to the dataset: https://www.icpsr.umich.edu/web/NACDA/series/706
+
+Abstract:
+The current academic literature in predicting mortality has extensively focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. Using 24 social network and demographic factors, we developed a predictive model of 10-year mortality in a nationally representative sample of older adults in the US. We first used tree-based algorithms of Decision Tree (DT) and Random Forest (RF) that account for the interdependency of the social features and decide the splitting nodes and thresholds using entropy gain conditional on the previous splitting to discern disposition status. Additionally, we used the Support Vector Machine (SVM) that regards every sample as a node in high-level vector space and splits the nodes with an optimum plane by finding the best linear combination of features to get an optimum splitting accuracy. After the training and testing process, our algorithms reach accuracies of 74.7% for DT, 76.3% for RF, and 80.1% for SVM. We also discussed the social and demographic characteristics of the cases whose disposition statuses were either wrongly predicted as death or alive by our algorithms. The findings serve important purposes for public health practitioners in understanding the risk and protective factors of mortality in the aging process.
+
+
     
 Our target variable is mortality (binary). There are 3005 observations in NSHAP with 893 deaths, which is a 29.7% mortality rate. The data is imbalanced (893 positive, 2112 negative), and we use the following methods to deal with the imbalance:
     1. Undersampling
@@ -58,8 +80,6 @@ We use the following packages:
     3. sklearn
     4. matplotlib
     5. seaborn
-
-Previous paper predicts 5-year mortality with olfactory dysfunction (https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107541#s2)
 
 ----------------------
 
