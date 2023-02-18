@@ -28,16 +28,21 @@ We use 24 predictors:
     5. Network measures: size of social network (continuous), number of unique social contacts (continuous), proportion of social contacts living together (continuous), average frequency of talking to social contacts (continuous), and average closeness to social contacts (continuous)
             These measures were selected based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6110003/
 
-1. Body mass index: (NSHAP: BMI (continuous); WLS: z_ix011rec (continuous); HC139 - weight in pounds, HC 142 height in inches (binary)
-2. Hypertension: NSHAP: CONDITNS_6 (binary); WLS: z_ax341re (binary); HC005 (binary)
-3. Diabetes: NSHAP: CONDITNS_7 (binary); WLS: z_ax342re (binary); HC010 (binary)
-4. Fallen: NSHAP: FALLEN (binary); WLS: z_ix150rer (binary); HC079 (binary)
-5. Smoking: NSHAP: SMOKECIG (binary); WLS: z_ix013rec (binary); HC117 (binary)
-6. Drunk alcohol: NSHAP: EVERDRNK (binary); WLS: z_gu025e (binary); HC134 (binary)
-7. Age at baseline: NSHAP AGE (ordinal); WLS: z_brdxdy (ordinal, year of birth); HX067_R (ordinal, year of birth)
-8. Education: NSHAP: EDUC (ordinal); WLS: edat16 (ordinal); HB014A (ordinal, year of birth)
-9. Net household assets: NSHAP: HSASSETS_RECODE (ordinal); WLS: z_rr043rec (continuous); HC134 + HQ331 + HQ376 (continuous)
-10. Marital status: NSHAP: MARITAL (binary); WLS: z_brdxdy (ordinal, year of birth); HX067_R (ordinal, year of birth)
+1. Body mass index: (NSHAP: BMI (continuous); WLS: z_ix011rec (continuous); HRS: HC139 - weight in pounds (continuous)
+2. Hypertension: NSHAP: CONDITNS_6 (binary); WLS: z_ax341re (binary); HRS: HC005 (binary)
+3. Diabetes: NSHAP: CONDITNS_7 (binary); WLS: z_ax342re (binary); HRS: HC010 (binary)
+4. Self-rated health: NSHAP: PHYSHEALTH + MNTLHLTH (ordinal); WLS: z_ix001rer (ordinal); HRS: HC001 (ordinal)
+5. Arthritis: NSHAP: FALLEN (binary); WLS: z_gx360re (binary); HRS: HC070 (binary)
+6. Smoking: NSHAP: SMOKECIG (binary); WLS: z_ix013rec (binary); HRS: HC117 (binary)
+7. Drunk alcohol: NSHAP: EVERDRNK (binary); WLS: z_gu025re (binary); HRS: HC128 (binary)
+8. Age at baseline: NSHAP AGE (ordinal); WLS: z_brdxdy (ordinal, year of birth); HRS: HX067_R (ordinal, year of birth)
+9. Education: NSHAP: EDUC (ordinal); WLS: z_gb103red (ordinal); HRS: HB014A (ordinal)
+10. Net household assets: NSHAP: HSASSETS_RECODE (ordinal); WLS: z_gp260hec (continuous); HRS: HC134 + HQ331 + HQ376 (continuous)
+11. Marital status: NSHAP: MARITAL (binary); WLS: z_gc042re (binary); HRS: HMARITAL (binary)
+12. Sex: NSHAP: GENDER (binary); WLS: z_sexrsp (binary); HRS: HX060_R (binary)
+13. Race: NSHAP: RACE_RECODE (binary); WLS: z_ie020re (binary); HRS: HB031A (binary)
+14. Religion Importance:  BELIEFS (ordinal); WLS: z_il003rer (ordinal); HRS: HB053 (ordinal)
+
 Project 2 (Yiang):
 Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
 
