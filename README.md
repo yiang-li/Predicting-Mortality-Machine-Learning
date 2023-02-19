@@ -42,6 +42,13 @@ We use 24 predictors:
 12. Sex: NSHAP: GENDER (binary); WLS: z_sexrsp (binary); HRS: HX060_R (binary)
 13. Race: NSHAP: RACE_RECODE (binary); WLS: z_ie020re (binary); HRS: HB031A (binary)
 14. Religion Importance:  BELIEFS (ordinal); WLS: z_il003rer (ordinal); HRS: HB053 (ordinal)
+15. Children co-residence: NSHAP: LIVEC (binary); WLS: z_gd103kd (binary); HRS: HE012 (binary)
+16. Grandchildren: NSHAP: PLAYCHLD (binary); WLS: z_id014cre (binary); HRS: HE046 (ordinal)
+17. Relatives: NSHAP: CLSREL (binary); WLS: z_iz106rer (ordinal); HRS: HF174 (binary)
+18. Volunteer: NSHAP: VOLUNTEER (binary); WLS: z_in504rer (ordinal); HRS: HG092 (binary)
+19. Friends: NSHAP: SOCIAL (binary); WLS: z_iz023rer (ordinal); HRS: HF176 (ordinal)
+20. Functional limitations: NSHAP: WALKBLK (binary); WLS: z_iv032re (binary); HRS: HG001 (binary)
+
 
 Project 2 (Yiang):
 Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
