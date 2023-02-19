@@ -16,7 +16,7 @@ clear
 
 set more off
 cd "/Users/yiang/Downloads/Core_HRS_2002/csv"
-foreach data in H02C_R H02Q_H{
+foreach data in H02C_R H02E_H H02F_R H02G_R H02Q_H{
 	global path "/Users/yiang/Downloads/Core_HRS_2002"
 	infile using "$path/h02sta/`data'.dct", using ("$path/h02da/`data'.da")
 	save "$path/data/`data'.dta", replace
