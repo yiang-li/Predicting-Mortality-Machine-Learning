@@ -51,9 +51,16 @@ We use 24 predictors:
 
 
 Project 2 (Yiang):
+The current academic literature in predicting mortality has extensively focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. I tested the effectiveness of the machine learning algorithms on the NSHAP sample in Project 1 and learnt the important features predicting mortality. This project will extend the analysis by 1) using a different set of predictors 2) applying some new algorithms in addition to tree-based algorithm 3) using a different dataset.
+
 Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
 
 The link to the dataset: https://hrs.isr.umich.edu/data
+
+Challenges:
+1. The dataset is very large (over 20,000 observations) and the number of predictors is also large (over 1000).
+
+
 
 Project 2 (Zejian):
 Wisconsin Longitudinal Study (WLS) is a prospective cohort study of graduates of Wisconsin high schools. I use 2004 characteristics as baseline and 2020 disposition status as target.
