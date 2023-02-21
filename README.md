@@ -1,17 +1,12 @@
-### MACS-30100 "Perspectives on Computational Modeling" Project-1
+### MACS-30100 "Perspectives on Computational Modeling" Project
 
-Due on **Feb 5th Sunday 11:00 pm**.
 
-For submission on GradeScope, please only submit your **Jupyter notebook**.
+The shared **link** to the recording (< 6min) here: 
 
-For submission of the whole project, please push your Jupyter notebook (make sure to add comments for explanation, following the style of previously released coding quizzes) and your slides (< 10pages) to this GitHub repo (here), name the repo as **30100_P1_YourLastFirstName**.
-
-Please record your presentation and upload the shared **link** to your recording (< 6min) here: 
-
-https://youtu.be/HEdK6qYsY_Q
+Project 1: https://youtu.be/HEdK6qYsY_Q
 
 ---------------------- 
-## Predicting Mortality of the Older US Adults in a Nationally Representative Survey
+## Predicting Mortality of the Older US Adults in Nationally Representative Survies
 
 ## Authors: Yiang Li and Zejian Lv
 
@@ -19,14 +14,10 @@ This is a project for MACS 30100 Perspectives in Computational Modeling at the U
 
 The goal of this project is to train a binary classifier to predict the mortality of older US Adults in modern nationally representative aging surveys.
 
-We use 24 predictors:
-    1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin A1C (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
-            These measures were selected based on the following papers: https://academic.oup.com/psychsocgerontology/article/76/3/574/5703612 and https://academic.oup.com/psychsocgerontology/article/64B/suppl_1/i67/552266
-    2. Health behaviors: smoking (binary), alcohol consumption (binary), physical activity (binary), and sleep duration (ordinal) 
-    3. Socio-demographic status: age (ordinal), education (ordinal), net household assets (ordinal), marital status (binary), sex (binary), and race (binary)
-    4. Health status: self-rated physical (ordinal) and mental health (ordinal), lung COPD conditions (binary), and functional limitations (binary)
-    5. Network measures: size of social network (continuous), number of unique social contacts (continuous), proportion of social contacts living together (continuous), average frequency of talking to social contacts (continuous), and average closeness to social contacts (continuous)
-            These measures were selected based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6110003/
+#### Project 2:
+
+The current academic literature in predicting mortality has extensively focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. I tested the effectiveness of the machine learning algorithms on the NSHAP sample in Project 1 and learnt the important features predicting mortality. This project will extend the analysis by 1) using a different set of predictors 2) applying some new algorithms in addition to tree-based algorithm 3) using a different dataset.
+
 
 1. Body mass index: (NSHAP: BMI (continuous); WLS: z_ix011rec (continuous); HRS: HC139 - weight in pounds (continuous)
 2. Hypertension: NSHAP: CONDITNS_6 (binary); WLS: z_ax341re (binary); HRS: HC005 (binary)
@@ -50,26 +41,24 @@ We use 24 predictors:
 20. Functional limitations: NSHAP: WALKBLK (binary); WLS: z_iv032re (binary); HRS: HG001 (binary)
 
 
-Project 2 (Yiang):
-The current academic literature in predicting mortality has extensively focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. I tested the effectiveness of the machine learning algorithms on the NSHAP sample in Project 1 and learnt the important features predicting mortality. This project will extend the analysis by 1) using a different set of predictors 2) applying some new algorithms in addition to tree-based algorithm 3) using a different dataset.
-
+##### HRS (Yiang):
 Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
 
 The link to the dataset: https://hrs.isr.umich.edu/data
 
 Challenges:
-1. The dataset is very large (over 20,000 observations) and the number of predictors is also large (over 1000).
+1. Data preprocessing: the dataset is very large (about 20,000 observations) split into multiple ones require some data linkage work and I have to select 21 predictors from a large pool of predictors (over 1000).
+2. Understanding and learning the algorithms of stacking and bagging
+3. Interpreting the features in the random forest model
 
-
-
-Project 2 (Zejian):
+#### WLS (Zejian):
 Wisconsin Longitudinal Study (WLS) is a prospective cohort study of graduates of Wisconsin high schools. I use 2004 characteristics as baseline and 2020 disposition status as target.
 
 The link to the dataset: https://researchers.wls.wisc.edu/data/survey-data/
 
 
 
-Project 1:
+### Project 1:
 
 National Social and Health Survey (NSHAP) Wave 1 (2010, as baseline) and Wave 3 (2020, disposition status as target), which is a nationally representative survey of the older US adults (aged 57-85).
 
@@ -78,7 +67,14 @@ The link to the dataset: https://www.icpsr.umich.edu/web/NACDA/series/706
 Abstract:
 The current academic literature in predicting mortality has extensively focused on disease and frailty, although social, behavioral, and psychological statuses may herald broad physiological decline. Using 24 social network and demographic factors, we developed a predictive model of 10-year mortality in a nationally representative sample of older adults in the US. We first used tree-based algorithms of Decision Tree (DT) and Random Forest (RF) that account for the interdependency of the social features and decide the splitting nodes and thresholds using entropy gain conditional on the previous splitting to discern disposition status. Additionally, we used the Support Vector Machine (SVM) that regards every sample as a node in high-level vector space and splits the nodes with an optimum plane by finding the best linear combination of features to get an optimum splitting accuracy. After the training and testing process, our algorithms reach accuracies of 74.7% for DT, 76.3% for RF, and 80.1% for SVM. We also discussed the social and demographic characteristics of the cases whose disposition statuses were either wrongly predicted as death or alive by our algorithms. The findings serve important purposes for public health practitioners in understanding the risk and protective factors of mortality in the aging process.
 
-
+We use 24 predictors:
+    1. Allostatic load measures: systolic blood pressure (continuous), body mass index (continuous), glycated hemoglobin A1C (continuous), C-reactive protein (continuous), and hormone dehydroepiandrosterone (continuous)
+            These measures were selected based on the following papers: https://academic.oup.com/psychsocgerontology/article/76/3/574/5703612 and https://academic.oup.com/psychsocgerontology/article/64B/suppl_1/i67/552266
+    2. Health behaviors: smoking (binary), alcohol consumption (binary), physical activity (binary), and sleep duration (ordinal) 
+    3. Socio-demographic status: age (ordinal), education (ordinal), net household assets (ordinal), marital status (binary), sex (binary), and race (binary)
+    4. Health status: self-rated physical (ordinal) and mental health (ordinal), lung COPD conditions (binary), and functional limitations (binary)
+    5. Network measures: size of social network (continuous), number of unique social contacts (continuous), proportion of social contacts living together (continuous), average frequency of talking to social contacts (continuous), and average closeness to social contacts (continuous)
+            These measures were selected based on the following paper: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6110003/
     
 Our target variable is mortality (binary). There are 3005 observations in NSHAP with 893 deaths, which is a 29.7% mortality rate. The data is imbalanced (893 positive, 2112 negative), and we use the following methods to deal with the imbalance:
     1. Undersampling
