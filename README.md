@@ -59,7 +59,6 @@ The link to the dataset: https://researchers.wls.wisc.edu/data/survey-data/
 ### Project 3:
 Based on the features predicting mortality, we use unsupervised learning algorithms to cluster the older US adults into different groups and see if there are any differences in the mortality rate between the groups.
 
-
 ### Project 1:
 
 National Social and Health Survey (NSHAP) Wave 1 (2010, as baseline) and Wave 3 (2020, disposition status as target), which is a nationally representative survey of the older US adults (aged 57-85).
