@@ -56,6 +56,8 @@ Wisconsin Longitudinal Study (WLS) is a prospective cohort study of graduates of
 
 The link to the dataset: https://researchers.wls.wisc.edu/data/survey-data/
 
+### Project 3:
+Based on the features predicting mortality, we use unsupervised learning algorithms to cluster the older US adults into different groups and see if there are any differences in the mortality rate between the groups.
 
 
 ### Project 1:
