@@ -42,7 +42,7 @@ The current academic literature in predicting mortality has extensively focused 
 
 
 ##### HRS (Yiang):
-Household Retire Survey (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
+Health and Retirement Study (HRS) is a nationally representative survey of the older US adults (aged 50-61) collected every two years from 1992 to 2016. I use 2002 characteristics as baseline and 2016 disposition status as target. 
 
 The link to the dataset: https://hrs.isr.umich.edu/data
 
