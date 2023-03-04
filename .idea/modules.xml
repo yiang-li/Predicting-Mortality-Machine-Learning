@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../CS122/.idea/CS122.iml" filepath="$PROJECT_DIR$/../../CS122/.idea/CS122.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Project1.iml" filepath="$PROJECT_DIR$/.idea/Project1.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../course-materials/.idea/course-materials.iml" filepath="$PROJECT_DIR$/../../course-materials/.idea/course-materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../crystal_embedding/.idea/crystal_embedding.iml" filepath="$PROJECT_DIR$/../../crystal_embedding/.idea/crystal_embedding.iml" />
       <module fileurl="file://$PROJECT_DIR$/../.idea/persModel.iml" filepath="$PROJECT_DIR$/../.idea/persModel.iml" />
     </modules>
   </component>
